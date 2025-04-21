@@ -1,3 +1,4 @@
+
 const inputAmount = document.getElementById("amount-input");
 const swap = document.getElementById("swap-currencies");
 const outputAmount = document.getElementById("amount-output");
@@ -9,6 +10,11 @@ const template = document.getElementById("currency-options");
 const currencyFromSelect = document.getElementById("currency-from");
 const currencyToSelect = document.getElementById("currency-to");
 
+
+
+
+
+
 function populateCurrencyDropdowns() {
   const options = template.content.cloneNode(true);
   const optionsClone = template.content.cloneNode(true);
@@ -16,34 +22,37 @@ function populateCurrencyDropdowns() {
   currencyToSelect.appendChild(optionsClone);
 }
 populateCurrencyDropdowns();
+//set defaults for drop downs
+currencyFromSelect.value = "EUR"
+currencyToSelect.value = "USD"
+
+
+
+swap.addEventListener('click',(e)=>{
+  console.log(currencyFromSelect.value)
+})
+
+
+
+
+
 
 submit.addEventListener("click", () => {
   const amount = parseFloat(inputAmount.value);
-  const fromCurrency = currencyFromSelect.value;
-  const toCurrency = currencyToSelect.value;
+  const fromCurrency = currencyFromSelect;
+  const toCurrency = currencyToSelect;
 
-
-  if (isNaN(amount)) {
-    alert("Please enter a valid number for the amount.");
-    return;
-  }
-
-
-  const apiUrl = 
-
-  fetch(apiUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.result) {
-        outputAmount.value = data.result.toFixed(2);
-      } else {
-        alert("Conversion failed. Please try again.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error during conversion:", error);
-      alert(
-        "Something went wrong. Please check your internet connection and try again."
-      );
-    });
+   console.log(`apiendpoint:/${fromCurrency}/${toCurrency}/${amount}`)
+  
 });
+
+
+
+//reset
+
+reset.addEventListener('click',(e)=> {
+inputAmount.value = ""
+outputAmount = ''
+
+  console.log('reset pressed')
+})

@@ -31,15 +31,25 @@ body {
 
 .currency-section {
     margin: 10px 0;
-    text-align: left;
+    text-align: center;
 }
 
 
 .currency-section label {
     font-size: 14px;
     color: #555;
-    display: block;
     margin-bottom: 5px;
+}
+
+
+
+#amount-output{
+    display:none; 
+    /* ! when api comes back change this display */
+}
+
+#amount-input{
+    
 }
 
 input,
@@ -113,7 +123,9 @@ select:focus {
 .buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    align-content: space-around;
+    gap:10px;
+    padding-top: 10px;;
 }
 
 button {
@@ -166,7 +178,6 @@ button {
     position: relative;
     background: #dc3545;
     color: white;
-    margin-left: 10px;
     overflow: hidden;
 
 }
@@ -186,6 +197,7 @@ button {
     transform: translateX(5px) scale(2) rotate(-360deg);
 
 }
+ 
 
 
 button,
@@ -193,4 +205,3 @@ input,
 select {
     transition: all 0.2s ease-in-out;
 }
-
