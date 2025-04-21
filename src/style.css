@@ -70,26 +70,25 @@
     height: 24px;
     transition:all 0.3s ease-in;
 }
-#swap-currencies:hover{
-
-    color: white;
+#swap-currencies:hover {
+    border: grey;
 }
 #swap-currencies .arrow-down {
-    transition: transform 350ms ease;
+    transition: transform 250ms ease;
 }
 #swap-currencies .arrow-up {
-    transition: transform 350ms ease;
+    transition: transform 250ms ease;
 }
 
 
 
 #swap-currencies:active .arrow-up {
-    transform: translateX(100%);
+    transform: translateX(80%);
 
 }
 
 #swap-currencies:active .arrow-down {
-    transform: translateX(-100%);
+    transform: translateX(-80%);
 
 }
 
