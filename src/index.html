@@ -9,7 +9,7 @@
 <body>
 <div class="container">
   <div class="exchange-rate">
-    <p>Exchange Rate</p>
+    <h2>Exchange Rate</h2>
     <h1 id="result"><span id="csymbol">$ </span>buh</h1>
   </div>
   <form class="converter-form">
@@ -41,6 +41,14 @@
 </div>
 <!-- option templates for currencies -->
 <template id="currency-options">
+  <optgroup id="frequent-currencies" label="Most Frequent Currencies">
+    <option value="USD" selected>USD - United States Dollar (United States)</option>
+    <option value="EUR">EUR - Euro (European Union)</option>
+    <option value="GBP">GBP - Pound Sterling (United Kingdom)</option>
+    <option value="CHF">CHF - Swiss Franc (Switzerland)</option>
+    <option value="JPY">JPY - Japanese Yen (Japan)</option>
+  </optgroup>
+  <hr>
   <option value="ED">AED - UAE Dirham (United Arab Emirates)</option>
   <option value="AFN">AFN - Afghan Afghani (Afghanistan)</option>
   <option value="ALL">ALL - Albanian Lek (Albania)</option>
@@ -74,7 +82,7 @@
   <option value="CDF">
     CDF - Congolese Franc (Democratic Republic of the Congo)
   </option>
-  <option value="CHF">CHF - Swiss Franc (Switzerland)</option>
+
   <option value="CLP">CLP - Chilean Peso (Chile)</option>
   <option value="CNY">CNY - Chinese Renminbi (China)</option>
   <option value="COP">COP - Colombian Peso (Colombia)</option>
@@ -89,13 +97,13 @@
   <option value="EGP">EGP - Egyptian Pound (Egypt)</option>
   <option value="ERN">ERN - Eritrean Nakfa (Eritrea)</option>
   <option value="ETB">ETB - Ethiopian Birr (Ethiopia)</option>
-  <option value="EUR">EUR - Euro (European Union)</option>
+  
   <option value="FJD">FJD - Fiji Dollar (Fiji)</option>
   <option value="FKP">
     FKP - Falkland Islands Pound (Falkland Islands)
   </option>
   <option value="FOK">FOK - Faroese Króna (Faroe Islands)</option>
-  <option value="GBP">GBP - Pound Sterling (United Kingdom)</option>
+  
   <option value="GEL">GEL - Georgian Lari (Georgia)</option>
   <option value="GGP">GGP - Guernsey Pound (Guernsey)</option>
   <option value="GHS">GHS - Ghanaian Cedi (Ghana)</option>
@@ -202,9 +210,7 @@
   <option value="TZS">TZS - Tanzanian Shilling (Tanzania)</option>
   <option value="UAH">UAH - Ukrainian Hryvnia (Ukraine)</option>
   <option value="UGX">UGX - Ugandan Shilling (Uganda)</option>
-  <option value="USD" selected>
-    USD - United States Dollar (United States)
-  </option>
+ 
   <option value="UYU">UYU - Uruguayan Peso (Uruguay)</option>
   <option value="UZS">UZS - Uzbekistani So'm (Uzbekistan)</option>
   <option value="VES">VES - Venezuelan Bolívar Soberano (Venezuela)</option>

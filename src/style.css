@@ -1,24 +1,31 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
 .container {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
-  background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Exchange Rate Section */
 #result {
-    font-size: 32px; /* Style the h1 */
-    color: #333;
-    font-size:3em;
-
+  font-size: 3em;
+  color: #333;
+  font-weight: bold;
+  display: none;
 }
 
-#result ,#csymbol {
-    font-weight: bold; /* Style the span inside h1 */
-    color: #333;
-    display: none;
+#csymbol {
+  color: #333;
+  font-weight: bold;
 }
 
 .exchange-rate {
@@ -36,6 +43,7 @@
   color: #333;
 }
 
+/* Currency Row */
 .currency-row {
   display: flex;
   align-items: center;
@@ -44,70 +52,122 @@
 }
 
 .currency-group {
-    display: flex;
-    flex-direction: column; /* Stack label above the dropdown */
-    align-items: flex-start; /* Align label and dropdown to the start */
-    text-align: left; /* Align the label text to the left */
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .currency-row label {
-    font-weight: bold;
-   }
+  font-weight: bold;
+}
 
-
+/* Swap Button */
 #swap-currencies {
   width: 40px;
   height: 40px;
-  background: #f4f4f4;
+  background: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 }
-/* fix the animation to hover / click */
-#swap-currencies svg{
-    width: 24px;
-    height: 24px;
-    transition:all 0.3s ease-in;
-}
+
 #swap-currencies:hover {
-    border: grey;
+  background-color: blue;
+  color: white;
 }
+
+#swap-currencies .arrow-up,
 #swap-currencies .arrow-down {
-    transition: transform 250ms ease;
+  transition: transform 150ms ease;
 }
-#swap-currencies .arrow-up {
-    transition: transform 250ms ease;
-}
-
-
 
 #swap-currencies:active .arrow-up {
-    transform: translateX(80%);
-
+  transform: translateX(100%);
 }
 
 #swap-currencies:active .arrow-down {
-    transform: translateX(-80%);
-
+  transform: translateX(-100%);
 }
 
-
-
-
-
-
-
-#currency-from,
-#currency-to {
-margin-bottom: 10;
-width: 100%;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-box-sizing: border-box;
+/* Input Group */
+#input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
+#input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Form Elements */
+.converter-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.converter-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+select {
+  width: 100%;
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  appearance: none;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+option {
+  font-size: 18px;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+}
+
+/* Optgroup Styles */
+#frequent-currencies {
+  font-weight: bold;
+  color: #007bff;
+  background-color: #f9f9f9;
+  padding: 5px;
+}
+
+optgroup {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Convert Button */
 #convert-btn {
   width: 100%;
   padding: 10px;
@@ -117,39 +177,4 @@ box-sizing: border-box;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-}
-
-#input-group {
-  display: flex;
-  flex-direction: column; /* Stack label above the input field */
-  align-items: flex-start; /* Align label and input to the start */
-  text-align: left; /* Align the label text to the left */
-  margin-bottom: 1rem; /* Add spacing below the input group */
-}
-
-#input-group label {
-  margin-bottom: 5px; /* Add spacing between the label and input field */
-  font-weight: bold; /* Optional: Make the label text bold */
-}
-
-#input-group input {
-  width: 100%; /* Make the input field take full width */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.converter-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.converter-form input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin-bottom: 1rem;
 }
