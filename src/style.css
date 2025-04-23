@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+
+
 /* Container */
 .container {
   max-width: 400px;
@@ -65,7 +67,7 @@
 
 /* Swap Button */
 #swap-currencies {
-  width: 40px;
+  width: 50px;
   height: 40px;
   background: #ffffff;
   border: none;
@@ -74,23 +76,35 @@
   transition: all 0.3s ease-in;
 }
 
-#swap-currencies:hover {
-  background-color: blue;
-  color: white;
-}
-
 #swap-currencies .arrow-up,
 #swap-currencies .arrow-down {
-  transition: transform 150ms ease;
+  svg {
+    fill: inherit;
+  }
 }
 
 #swap-currencies:active .arrow-up {
   transform: translateX(100%);
 }
 
-#swap-currencies:active .arrow-down {
-  transform: translateX(-100%);
+#swap-currencies:hover {
+  background-color: rgb(0, 0, 0); 
+  color: #ffffff;
 }
+
+
+#swap-currencies:hover {
+  background-color: black;
+}
+
+#swap-currencies:hover .arrow-up,
+#swap-currencies:hover .arrow-down {
+  fill: white
+}
+
+/*  swap button */
+
+
 
 /* Input Group */
 #input-group {
@@ -138,12 +152,20 @@ select {
   color: #333;
   appearance: none;
   cursor: pointer;
+  max-width: 200px;
 }
 
 select:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  max-width: 250px;
+  max-height: 100px;
+}
+
+select:active {
+  max-width: 100px;
+  max-height: 200px;
 }
 
 option {
