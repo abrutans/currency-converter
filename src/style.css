@@ -76,22 +76,34 @@
   transition: all 0.3s ease-in;
 }
 
+svg {
+  fill: inherit;
+}
+
+
 #swap-currencies .arrow-up,
 #swap-currencies .arrow-down {
-  svg {
-    fill: inherit;
-  }
+  transition: transform 250ms ease;
+}
+
+
+
+#swap-currencies:active{
+  transition:transform 250ms ease;
 }
 
 #swap-currencies:active .arrow-up {
   transform: translateX(100%);
 }
+#swap-currencies:active .arrow-down {
+  transform: translateX(-100%);
+}
+
 
 #swap-currencies:hover {
   background-color: rgb(0, 0, 0); 
   color: #ffffff;
 }
-
 
 #swap-currencies:hover {
   background-color: black;
@@ -159,14 +171,10 @@ select:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  max-width: 250px;
-  max-height: 100px;
+
+
 }
 
-select:active {
-  max-width: 100px;
-  max-height: 200px;
-}
 
 option {
   font-size: 18px;
